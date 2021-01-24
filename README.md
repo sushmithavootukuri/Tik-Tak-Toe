@@ -10,7 +10,7 @@
 
 ### Installation
 
-Requires [Node.js](https://nodejs.org/)  to run.
+Requires [Node.js](https://nodejs.org/).
 
 ```sh
 $ npm install
