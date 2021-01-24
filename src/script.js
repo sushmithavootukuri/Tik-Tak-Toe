@@ -53,9 +53,7 @@ function validateResult() {
             continue;
         }
         if (a === b && b === c) {
-            console.log(a, b, c);
             roundWon = true;
-            console.log(document.querySelectorAll('.cell'));
             document.querySelectorAll('.cell')[winCondition[0]].classList.add("won");
             document.querySelectorAll('.cell')[winCondition[1]].classList.add("won");
             document.querySelectorAll('.cell')[winCondition[2]].classList.add("won");
@@ -63,7 +61,6 @@ function validateResult() {
         }
     }
     if (roundWon) {
-        console.log("msg " + winningMessage().slice(0, 6));
         statusDisplay.innerHTML = winningMessage();
         if (winningMessage().slice(0, 6) === "Player") {
             statusDisplay.setAttribute("style", "color:blue;");
@@ -71,7 +68,6 @@ function validateResult() {
         gameActive = false;
         return;
     }
-    console.log(gameState);
     var roundDraw = !gameState.includes("");
     if (roundDraw) {
         statusDisplay.innerHTML = drawMessage();
